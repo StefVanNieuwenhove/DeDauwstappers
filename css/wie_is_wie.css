@@ -63,8 +63,124 @@ nav #menu-checkbox {
     display: none;
 }
 
-/* we plaatsen een 'break point" bij 576px */
-@media screen and (min-width: 576px) {
+/* END HEADER */
+
+/* START MAIN */
+body {
+    margin: 0;
+}
+
+main {
+    text-align: center;
+    position: relative;
+}
+
+
+main h2 {
+    text-align: center;
+}
+
+
+
+/* END MAIN */
+
+/* START FOOTER */
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    background-color: red;
+    color: white;
+}
+
+
+/* END FOOTER */
+
+@media screen and (max-width: 700px) {
+    #logoRight {
+        display: none;
+    }
+
+    #logoLeft {
+        width: 50%;
+    }
+
+    .title h1 {
+        font-size: 20px;
+    }
+
+    main table img {
+        width: 100px;
+        height: 140px;
+    }
+
+    main table p {
+        font-size: 15px
+    }
+
+    footer {
+        position: relative;
+    }
+
+    li {
+        padding: 5px;
+    }
+}
+
+/* Test responsive navbar for smartphone */
+@media screen and (max-width: 700px) {
+    #logoRight {
+        display: none;
+    }
+
+    #logoLeft {
+        width: 150px;
+    }
+
+    .title h1 {
+        font-size: 40px;
+    }
+
+    main img {
+        max-width: 100%;
+    }
+
+    footer {
+        position: relative;
+    }
+
+    li {
+        padding: 5px;
+    }
+
+
+}
+
+
+/* Test responsive navbar for Tablet */
+@media screen and (min-width: 701px) and (max-width: 894px) {
+    .card img {
+        width: 200px;
+        height: 250px;
+    }
+
+    #grid {
+        display: flex;
+        justify-content: center;
+        grid-gap: 5px;
+        ;
+    }
+
+    footer {
+        position: absolute;
+    }
+}
+
+/* Test responsive navbar for Desktop */
+@media screen and (min-width: 895px) {
 
     /* in desktop view is het horizontaal menu altijd zichtbaar */
     nav ul {
@@ -83,81 +199,20 @@ nav #menu-checkbox {
         display: none;
     }
 
-}
-
-@media screen and (max-width: 576px) {
-    #logoRight {
-        display: none;
+    .card img {
+        width: 200px;
+        height: 250px;
     }
-}
 
-/* END HEADER */
-
-/* START MAIN */
-body {
-    margin: 0;
-}
-
-main {
-    text-align: center;
-    position: relative;
-}
-
-
-main h2 {
-    text-align: center;
-}
-
-main table img {
-    border: 1px solid black;
-    width: 200px;
-    height: 250px;
-}
-
-table {
-    margin: auto;
-}
-
-/* END MAIN */
-
-/* START FOOTER */
-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    overflow: hidden;
-    background-color: red;
-    color: white;
-}
-
-
-/* END FOOTER */
-
-@media screen and (max-width: 700px) {
-    #logoRight {
-        display: none;
-    }
-    #logoLeft {
-        width: 50%;
-    }
-   
-    .title h1 {
-        font-size: 20px;
-    }
-    main table img{
-        width: 100px;
-        height: 140px;
-    }
-    main table p {
-        font-size: 15px
+    #grid {
+        display: flex;
+        justify-content: center;
+        grid-gap: 5px;
+        ;
     }
 
     footer {
-        position: relative;
-    }
-    li {
-        padding: 5px;
+        position: absolute;
+        ;
     }
 }
