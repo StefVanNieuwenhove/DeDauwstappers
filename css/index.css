@@ -75,12 +75,12 @@ main {
     text-align: center;
 }
 
-main img {
+/* main img {
     border: 1px solid lightgray;
     width: 1000px;
     height: 500px;
     border-radius: 7px;
-}
+} */
 
 h2 {
     text-decoration: underline;
@@ -131,7 +131,8 @@ footer {
     }
 
     main img {
-        max-width: 100%;
+        max-width: 80%;
+        margin-top: 25px
     }
 
     footer {
@@ -173,7 +174,7 @@ footer {
     }
 
     footer {
-        position: absolute;
+        position: relative;
         ;
     }
 }
