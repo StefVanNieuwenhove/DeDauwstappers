@@ -1,78 +1,77 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
 /* START HEADER */
 .title h1 {
-    margin: auto;
-    font-size: 40px;
+  margin: auto;
+  font-size: 40px;
 }
 
 .title {
-    display: flex;
+  display: flex;
 }
 
 .title img {
-    height: 150px;
+  height: 150px;
 }
-
 
 /* HAMBURGER MENU */
 
 nav {
-    background-color: red;
-    overflow: hidden;
+  background-color: red;
+  overflow: hidden;
 }
 
 /* muisaanwijzer instellen */
 nav img#hamburger-icon {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /* default verbergen we het menu */
 nav ul {
-    display: none;
-    text-align: center;
-    list-style-type: none;
+  display: none;
+  text-align: center;
+  list-style-type: none;
 }
 
 nav a {
-    text-decoration: none;
-    color: white;
-    padding: 15px 17px;
-    font-size: 25px;
+  text-decoration: none;
+  color: white;
+  padding: 15px 17px;
+  font-size: 25px;
 }
 
 nav a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 nav a.active {
-    text-decoration: underline;
-    font-weight: bold;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 /* als de checkbox checked is geven we het menu
   terug weer */
-nav #menu-checkbox:checked~ul {
-    display: block;
+nav #menu-checkbox:checked ~ ul {
+  display: block;
 }
 
 /* checkbox moet niet zichtbaar zijn */
 nav #menu-checkbox {
-    display: none;
+  display: none;
 }
 
 /* END HEADER */
 
 /* START MAIN */
 main {
-    margin: 15px;
-    text-align: center;
+  margin: 15px;
+  text-align: center;
 }
 
 /* main img {
@@ -83,99 +82,89 @@ main {
 } */
 
 h2 {
-    text-decoration: underline;
-    font-family: helvetica;
-    text-align: center;
+  text-decoration: underline;
+  font-family: helvetica;
+  text-align: center;
 }
-
-
 
 /* END MAIN */
 
 /* START FOOTER */
 footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    overflow: hidden;
-    background-color: red;
-    color: white;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  background-color: red;
+  color: white;
 }
-
 
 /* END FOOTER */
 
-
 @media screen and (max-width: 1500px) {
-    footer {
-        position: relative;
-    }
+  footer {
+    position: relative;
+  }
 }
-
-
 
 /* Test responsive navbar for smartphone */
 @media screen and (max-width: 700px) {
-    #logoRight {
-        display: none;
-    }
+  #logoRight {
+    display: none;
+  }
 
-    #logoLeft {
-        width: 150px;
-    }
+  #logoLeft {
+    width: 150px;
+  }
 
-    .title h1 {
-        font-size: 40px;
-    }
+  .title h1 {
+    font-size: 40px;
+  }
 
-    main img {
-        max-width: 80%;
-        margin-top: 25px
-    }
+  main img {
+    max-width: 80%;
+    margin-top: 25px;
+  }
 
-    footer {
-        position: absolute;
-    }
+  footer {
+    position: absolute;
+  }
 
-    li {
-        padding: 5px;
-    }
+  li {
+    padding: 5px;
+  }
 }
-
 
 /* Test responsive navbar for Tablet */
 @media screen and (min-width: 701px) and (max-width: 894px) {
-    footer {
-        position: absolute;
-    }
+  footer {
+    position: absolute;
+  }
 }
-
 
 /* Test responsive navbar for Desktop */
 @media screen and (min-width: 895px) {
+  /* in desktop view is het horizontaal menu altijd zichtbaar */
+  nav ul {
+    display: block;
+  }
 
-    /* in desktop view is het horizontaal menu altijd zichtbaar */
-    nav ul {
-        display: block;
-    }
-
-    /* in desktop view plaatsen we de menu-items naast elkaar
+  /* in desktop view plaatsen we de menu-items naast elkaar
     en passen de witruimte aan */
-    nav li {
-        display: inline-block;
-        padding: 0 7px;
-    }
+  nav li {
+    display: inline-block;
+    padding: 0 7px;
+  }
 
-    /* in desktop view verbergen we het label dat het hamburger-icon bevat */
-    nav label[for='menu-checkbox'] {
-        display: none;
-    }
+  /* in desktop view verbergen we het label dat het hamburger-icon bevat */
+  nav label[for='menu-checkbox'] {
+    display: none;
+  }
 
-    footer {
-        position: fixed;
-        bottom: 0;
-        ;
-    }
+  footer {
+    position: fixed;
+    bottom: 0;
+  }
 }
