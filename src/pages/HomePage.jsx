@@ -11,14 +11,15 @@ const HomePage = () => {
           variant="h4"
           sx={{ textAlign: 'center', fontWeight: 'bold' }}
         >
-          We wensen jullie een romantische en een gezellige Valentijn
+          We wensen jullie een prettige lente toe!
         </Typography>
         <Box>
           <Card>
             <CardMedia
               component="img"
-              src="/images/content/valentijn.jpg"
+              src="/images/content/spring.jpg"
               sx={{ borderRadius: 5 }}
+              alt="lente"
             />
           </Card>
         </Box>

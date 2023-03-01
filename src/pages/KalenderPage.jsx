@@ -13,49 +13,55 @@ import {
   TableCell,
   Container,
   Button,
+  Box,
 } from '@mui/material';
 import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
 
 const kalender = [
   {
-    datum: '08/01/2023',
+    datum: '05/03/2023',
     uur: '9:00',
     plaats: 'Teralfene',
   },
   {
-    datum: '15/01/2023',
+    datum: '12/03/2023',
     uur: '8:30',
-    plaats: 'Asbeek',
+    plaats: 'Mazenzele',
   },
   {
-    datum: '22/01/2023',
+    datum: '19/03/2023',
     uur: '9:00',
     plaats: 'Teralfene',
   },
   {
-    datum: '29/01/2023',
+    datum: '26/03/2023',
     uur: '8:30',
-    plaats: 'Kobbegem',
+    plaats: 'Lente ontbijt (schettenberg)',
   },
   {
-    datum: '05/02/2023',
-    uur: '9:00',
-    plaats: 'Teralfene',
-  },
-  {
-    datum: '12/02/2023',
+    datum: '02/04/2023',
     uur: '8:30',
-    plaats: 'Gaasbeek',
+    plaats: 'Bekkerzeel',
   },
   {
-    datum: '19/02/2023',
+    datum: '09/04/2023',
     uur: '9:00',
-    plaats: 'Teralfene',
+    plaats: 'Teralfene - Pasen',
   },
   {
-    datum: '26/02/2023',
+    datum: '16/04/2023',
     uur: '8:30',
     plaats: 'Ossel',
+  },
+  {
+    datum: '23/04/2023',
+    uur: '9:00',
+    plaats: 'Teralfene',
+  },
+  {
+    datum: '30/04/2023',
+    uur: 'Busreis waarschijnlijk naar Lommel',
+    plaats: 'Lommelse sahara (info volgt)',
   },
 ];
 
@@ -76,7 +82,7 @@ const KalenderPage = () => {
               <TableRow>
                 <TableCell colSpan={3} sx={{ textAlign: 'center' }}>
                   <Typography variant="h4" sx={{ fontWeight: 'bold' }}>
-                    Kalender Januari en Februari 2023
+                    Kalender Maart en April 2023
                   </Typography>
                 </TableCell>
               </TableRow>
@@ -100,14 +106,14 @@ const KalenderPage = () => {
             </TableHead>
             <TableBody>
               {data.map((item) => (
-                <TableRow key={item.datum}>
+                <TableRow key={item.datum} sx={{ textAlign: 'center' }}>
                   <TableCell>
                     <Typography variant="h6">{item.datum}</Typography>
                   </TableCell>
-                  <TableCell>
+                  <TableCell sx={{ width: '40%' }}>
                     <Typography variant="h6">{item.uur}</Typography>
                   </TableCell>
-                  <TableCell>
+                  <TableCell sx={{ width: '40%' }}>
                     <Typography variant="h6">{item.plaats}</Typography>
                   </TableCell>
                 </TableRow>
@@ -129,8 +135,8 @@ const KalenderPage = () => {
                 <TableCell colSpan={3} sx={{ textAlign: 'center' }}>
                   <Button
                     component="a"
-                    href="/pdf/Kalender_janFeb_2023.pdf"
-                    download="Kalender_janFeb_2023.pdf"
+                    href="/pdf/Kalender_maartApril_2023.pdf"
+                    download="Kalender_maartApril_2023.pdf"
                     variant="contained"
                     size="lg"
                     OnClick={handleClick}
