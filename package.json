@@ -1,7 +1,7 @@
 {
   "name": "dauwstappers",
   "version": "0.1.0",
-  "main": "index.html",
+  "main": "public/index.html",
   "private": false,
   "dependencies": {
     "@emotion/react": "^11.10.5",
