@@ -1,0 +1,10 @@
+cd Documents/Projects/DeDauwstappers
+scp build dedauwstapperscom@ssh.dedauwstappers.com
+ssh dedauwstapperscom@ssh.dedauwstappers.com
+cd www/
+rm asset-manifest.json index.html manifest.json robots.txt
+rm -r images/ pdf/ static/
+cd build/
+cp -r static/ pdf/ images/ /data/sites/web/dedauwstapperscom/www/
+cp index.html manifest.json asset-manifest.json robots.txt /data/sites/web/dedauwstapperscom/www/
+rm -r build
