@@ -6,20 +6,19 @@ import React from 'react';
 const HomePage = () => {
   return (
     <>
-      <Container maxWidth="md">
+      <Container maxWidth='md'>
         <Typography
-          variant="h4"
-          sx={{ textAlign: 'center', fontWeight: 'bold' }}
-        >
-          We wensen jullie een prettige lente toe!
+          variant='h4'
+          sx={{ textAlign: 'center', fontWeight: 'bold' }}>
+          We wensen jullie een zalig kerstfeest en een gelukkig nieuwjaar
         </Typography>
         <Box>
           <Card>
             <CardMedia
-              component="img"
-              src="/images/content/spring.jpg"
+              component='img'
+              src='/images/content/nieuwjaar2024.jpg'
               sx={{ borderRadius: 5 }}
-              alt="lente"
+              alt='lente'
             />
           </Card>
         </Box>
