@@ -23,7 +23,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { NavLink } from 'react-router-dom';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'Bestuur', 'Kalender', 'Motto', 'Archief', 'Contact'];
+const navItems = [
+  'Home',
+  'Bestuur',
+  'Kalender',
+  'Motto',
+  /* 'Archief', */ 'Contact',
+];
 
 function NavBar(props) {
   const { window } = props;
@@ -46,9 +52,8 @@ function NavBar(props) {
   const drawer = (
     <Box
       onClick={handleDrawerToggle}
-      sx={{ textAlign: 'center', backgroundColor: 'red', color: 'white' }}
-    >
-      <Typography variant="h6" sx={{ my: 2 }}>
+      sx={{ textAlign: 'center', backgroundColor: 'red', color: 'white' }}>
+      <Typography variant='h6' sx={{ my: 2 }}>
         De Dauwstappers
       </Typography>
       <Divider sx={{ color: 'black' }} />
@@ -61,10 +66,9 @@ function NavBar(props) {
               to={item}
               style={({ isActive }) =>
                 isActive ? activeStyleDrawer : undefined
-              }
-            >
+              }>
               <ListItemText>
-                <Typography variant="h6">{item}</Typography>
+                <Typography variant='h6'>{item}</Typography>
               </ListItemText>
             </ListItemButton>
           </ListItem>
@@ -81,7 +85,7 @@ function NavBar(props) {
     });
 
     return (
-      <Slide appear={false} direction="down" in={!trigger}>
+      <Slide appear={false} direction='down' in={!trigger}>
         {children}
       </Slide>
     );
@@ -95,24 +99,22 @@ function NavBar(props) {
       <CssBaseline />
       <HideOnScroll {...props}>
         <AppBar
-          component="nav"
-          sx={{ backgroundColor: 'red', color: 'white', height: 90 }}
-        >
+          component='nav'
+          sx={{ backgroundColor: 'red', color: 'white', height: 90 }}>
           <Toolbar>
             <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
+              color='inherit'
+              aria-label='open drawer'
+              edge='start'
               onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: 'block', lg: 'none' } }}
-            >
+              sx={{ mr: 2, display: { sm: 'block', lg: 'none' } }}>
               <MenuIcon />
             </IconButton>
             <Box>
               <Avatar
-                src="/images/logo_dauwstappers_icon.ico"
-                alt="De dauwstappers"
-                variant="rounded"
+                src='/images/logo_dauwstappers_icon.ico'
+                alt='De dauwstappers'
+                variant='rounded'
                 sx={{
                   width: 90,
                   height: 90,
@@ -122,27 +124,26 @@ function NavBar(props) {
               />
             </Box>
             <Typography
-              variant="h4"
-              component="div"
-              sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' } }}
-            >
+              variant='h4'
+              component='div'
+              sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' } }}>
               De Dauwstappers
             </Typography>
             <Box
               sx={{
                 display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' },
-              }}
-            >
+              }}>
               {navItems.map((item) => (
                 <Button
                   key={item}
-                  size="large"
+                  size='large'
                   sx={{ color: '#fff', mx: 1, '&:hover': { color: '#000' } }}
                   component={NavLink}
                   to={item}
-                  style={({ isActive }) => (isActive ? activeStyle : undefined)}
-                >
-                  <Typography variant="h6">{item}</Typography>
+                  style={({ isActive }) =>
+                    isActive ? activeStyle : undefined
+                  }>
+                  <Typography variant='h6'>{item}</Typography>
                 </Button>
               ))}
             </Box>
@@ -150,10 +151,10 @@ function NavBar(props) {
         </AppBar>
       </HideOnScroll>
       <Toolbar />
-      <Box component="nav">
+      <Box component='nav'>
         <Drawer
           container={container}
-          variant="temporary"
+          variant='temporary'
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
@@ -165,12 +166,11 @@ function NavBar(props) {
               boxSizing: 'border-box',
               width: drawerWidth,
             },
-          }}
-        >
+          }}>
           {drawer}
         </Drawer>
       </Box>
-      <Box component="main" sx={{ p: 3 }}>
+      <Box component='main' sx={{ p: 3 }}>
         <Toolbar />
       </Box>
     </Box>

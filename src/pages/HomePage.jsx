@@ -16,7 +16,7 @@ const HomePage = () => {
           <Card>
             <CardMedia
               component='img'
-              src='/images/content/nieuwjaar2024.jpg'
+              src='/images/groepsfoto.jpg'
               sx={{ borderRadius: 5 }}
               alt='lente'
             />
